@@ -16,3 +16,9 @@ when all those points are graphed in you will find they form a Sierpiński trian
 # room for improvement
 - i think i could probly improve the way the first point is generated possibly by only generating an x coordinate because that would be garunteed to be in the triangle, then use that with the equation of the line and then randomly generate a y cor using that line cor as the upper limit 
 - i could also probobly make the code more modular and maybe more objcet orrientated
+
+#what i learnt
+- this small project helped me hone my problem solving as well as allowing me to apply skills i've learnt in school  (equation of a line, procedures)
+- i learnt about various new python libraries like matplotlib math as well as how to utilize them within code.
+- how to use procedures to make code more modular and efficient
+- the maths phenomenon that is the cause of the points forming a serpinski triangle 
