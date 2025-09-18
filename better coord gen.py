@@ -1,6 +1,11 @@
 import random
 import math
 import csv
+import matplotlib.pyplot as ply
+
+x_li = []
+y_li = []
+accuracy = 100000
 
 A = [0,0]
 B = [5,5*math.sqrt(3)]
@@ -43,10 +48,13 @@ if y <= liney:
     inside = True
     truex = x
     truey = y
-    for i in range(10000):
-        with open("points.csv", mode="a", newline="") as file:
-            writer = csv.writer(file)
-            writer.writerow([truex,truey])
+    for i in range(accuracy):
         choice = random.choice([A,B,C])
         truex = (truex+choice[0])/2
         truey = (truey+choice[1])/2
+        x_li.append(truex)
+        y_li.append(truey)
+
+ply.scatter(x_li,y_li)
+ply.show()
+
