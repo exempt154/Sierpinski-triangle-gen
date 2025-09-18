@@ -1,16 +1,18 @@
-the program makes use of a mathematical trick i discorbered through youtube 
-
-1. Generate a point at a random position inside a triangle
-3. calculate the midpoint between that point and a randomly selected vertex on the triangle 
-4. append it to the csv file
-5. repeat steps 2,3 for the midpoint generated in the last loop
-
-1. i do step by generating a random x and y coordinate withing the max and min height and width of the triangle, then it plug the x coord of the point into a procedure to calculate the y coord of the line of the triangle, the program then compares the value of the y coord of the random point and the one it found that lies on the line of the triangle. If the  y coord on the line is less than randomly generated y coord that must mean the coordinate point falls outside the bounds of the triangle 
+the program makes use of a mathematical trick i discorbered through youtube called the chaos game 
+the amount of points it calculates depends on the value "accuracy" 
 
 
+# how its done
+1. Generate a point at a random position inside a square whose dementions are the maximum width and height of the triangle 
+2. use the x coordinate point from the the random point and the formula of the line of one side of the triangle depending if the x coordinate is on the left or the right. if the randomly generated is less than or equal to the one calculated it must mean it is either on or below the line of the triangle and if the y cor is greater than the calculated one it just repeats the loop until its less
+3. calculate the midpoint between that point and a randomly selected vertex of the triangle  using ((X_1 + X_2)/2, (Y_1 + Y_2)/2)
+4. append the x and y coordinates to individual lists 
+5. repeat step 3 and 4 for the midpoint generated in the last loop
+6. plots all the x and y cor using matplotlib 
 
-3. use basic math formulas to calculate the midpoint
 
-4. appends the coord to a new line on the csv file, im not sure how i would make it deletes everything previously entered in the csv file and initialize new heading and coords in stead of only adding 
+when all those points are graphed in you will find they form a Sierpiński triangle
 
-when all those points are graphed in R you will find they form a Sierpiński triangle
+# room for improvement
+- i think i could probly improve the way the first point is generated possibly by only generating an x coordinate because that would be garunteed to be in the triangle, then use that with the equation of the line and then randomly generate a y cor using that line cor as the upper limit 
+- i could also probobly make the code more modular and maybe more objcet orrientated
